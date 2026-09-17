@@ -930,6 +930,58 @@ button {
 
 
 /* =========================================================
+   INDICATEUR DE SCROLL
+========================================================= */
+
+.scroll-indicator {
+    position: absolute;
+
+    left: 50%;
+    bottom: 18px;
+
+    z-index: 10;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 30px;
+    height: 38px;
+
+    color:
+        rgba(255,255,255,.65);
+
+    font-size: 27px;
+    font-weight: 300;
+
+    transform:
+        translateX(-50%);
+
+    animation:
+        scrollHint 1.8s infinite ease-in-out;
+
+    pointer-events: none;
+}
+
+
+@keyframes scrollHint {
+
+    0%,100% {
+        transform:
+            translate(-50%, 0);
+        opacity: .55;
+    }
+
+    50% {
+        transform:
+            translate(-50%, 7px);
+        opacity: 1;
+    }
+
+}
+
+
+/* =========================================================
    SECTIONS
 ========================================================= */
 
@@ -2523,6 +2575,7 @@ footer {
         right: 5px;
         bottom: 115px;
     }
+
 }
 
 
@@ -2694,6 +2747,10 @@ footer {
 
     .hero {
         min-height: auto;
+        height: auto;
+        width: 100%;
+
+        overflow: hidden;
 
         padding-top: 125px;
         padding-bottom: 55px;
@@ -2703,12 +2760,32 @@ footer {
     .hero-grid {
         grid-template-columns: 1fr;
 
+        width: 100%;
+        min-width: 0;
+
         gap: 35px;
+    }
+
+
+    .hero-grid > * {
+        min-width: 0;
+        max-width: 100%;
     }
 
 
     .hero-text {
         padding-top: 0;
+
+        width: 100%;
+        min-width: 0;
+    }
+
+
+    .eyebrow {
+        min-width: 0;
+        max-width: 100%;
+
+        flex-wrap: wrap;
     }
 
 
@@ -2718,27 +2795,57 @@ footer {
 
         letter-spacing:
             -2.5px;
+
+        max-width: 100%;
+
+        overflow-wrap: break-word;
     }
 
 
     .intro {
         font-size: 15px;
+
+        max-width: 100%;
+
+        overflow-wrap: break-word;
+    }
+
+
+    .actions {
+        max-width: 100%;
+    }
+
+
+    .social {
+        max-width: 100%;
+    }
+
+
+    .hero-contact-mini {
+        max-width: 100%;
     }
 
 
     .portrait-wrap {
         min-height: 440px;
+
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
     }
 
 
     .portrait {
         width: 340px;
+        max-width: 100%;
     }
 
 
     .ring {
         width: 350px;
         height: 350px;
+
+        max-width: 100%;
     }
 
 

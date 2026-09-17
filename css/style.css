@@ -2824,6 +2824,37 @@ footer {
     }
 
 
+    /* =====================================================
+       ORDRE DES PROJETS SUR MOBILE
+
+       1 — Focus Agency
+       2 — Pré-diagnostic médical
+       3 — Sukaabé
+       4 — Data Warehouse
+
+       L'ordre desktop reste inchangé.
+    ===================================================== */
+
+    .projects .focus {
+        order: 1;
+    }
+
+
+    .projects .ai {
+        order: 2;
+    }
+
+
+    .projects .sukaabe {
+        order: 3;
+    }
+
+
+    .projects .bi {
+        order: 4;
+    }
+
+
     /* TIMELINE */
 
     .timeline {
